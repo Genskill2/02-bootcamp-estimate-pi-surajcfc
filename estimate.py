@@ -30,3 +30,34 @@ class TestMC(unittest.TestCase):
     
 if __name__ == "__main__":
     unittest.main()
+    
+import random
+
+def wallis(n):
+    x=1
+    for i in range(1,n+1):
+        x=x*4*pow(i,2)/(4*(pow(i,2)) - 1)
+    return 2*x
+
+def monte_carlo(n):
+    sq=0	
+    cir=0
+    r=0
+    for i in range(0,n):
+        a=random.random()
+        b=random.random()
+        c=pow(pow(a,2)+pow(b,2),0.5)
+        if(c<=1):
+            cir+=1
+            sq+=1
+        else:
+            sq+=1
+    r=float(cir/sq)
+    return 4*r
+
+print("enter n for wallis")
+n=int(input())
+print(wallis((n)))
+print("enter n for monte carlo")
+n=int(input())
+print(monte_carlo(n))    
