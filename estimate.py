@@ -17,8 +17,6 @@ def monte_carlo(n):
             cir+=1
     return 4*cir/n
 
-  
-
 class TestWallis(unittest.TestCase):
     def test_low_iters(self):
         for i in range(0, 5):
