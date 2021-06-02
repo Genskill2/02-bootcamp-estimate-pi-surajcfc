@@ -17,13 +17,7 @@ def monte_carlo(n):
             cir+=1
     return 4*cir/n
 
-print("enter n for wallis")
-n=int(input())
-print(wallis((n)))
-print("enter n for monte carlo")
-n=int(input())
-print(monte_carlo(n))    
-
+  
 
 class TestWallis(unittest.TestCase):
     def test_low_iters(self):
